@@ -1,0 +1,77 @@
+<!--ASCII ART WEB YNOV INFORMATIQUE 2020
+Copyright INGREMEAU, CLAMADIEU-THARAUD, MICHEL 2020 -->
+
+{{ define "index"}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ascii art web</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div id="header">
+            <a href="/">
+                <h2>
+                    <pre>
+                      _   _                        _                             _      
+                     (_) (_)                      | |                           | |     
+  __ _   ___    ___   _   _   ___    __ _   _ __  | |_   ___  __      __   ___  | |__   
+ / _` | / __|  / __| | | | | |___|  / _` | | '__| | __| |___| \ \ /\ / /  / _ \ | '_ \  
+| (_| | \__ \ | (__  | | | |       | (_| | | |    \ |_         \ V  V /  |  __/ | |_) | 
+ \__,_| |___/  \___| |_| |_|        \__,_| |_|     \__|         \_/\_/    \___| |_.__/  
+                                                                                         
+                                                                                         
+</pre>
+                </h2>
+            </a>
+        </div>
+        <form action="/" method="POST" class="form">
+            <div class="select">
+
+                <label class="select_font" for="font">Font:</label>
+                <select name="font" id="font">
+                    <option value="standard" selected>Standard</option>
+                    <option value="shadow">Shadow</option>
+                    <option value="thinkertoy">Thinkertoy</option>
+                </select>
+
+                <label class="select_export" for="export">Wanna download the txt file? :</label>
+                <select name="export" id="export">
+                    <option value="false" selected>No</option>
+                    <option value="true">Yeah</option>
+                </select>
+                <input type="text" class="export-name" name="output-name" placeholder=" file name">
+            </div>
+
+            <div id="textbox">
+                <textarea class="textzone" name="text" required placeholder="the text u want to transform" id="text"
+                    cols="100" rows="10" minlength="1"></textarea>
+                <input type="submit" class="submit-button" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+    <pre class="output">{{ . }} </pre>
+    <div id=littleHelp>
+        <pre> How does it work ? select options and type the text you want to be converted in ascii
+
+characters available :
+Space ! " # $ % & ' ( ) * +  - . / 0 1 2 3 4 5 6 7 8 9 : ; < =
+> ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ 
+] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
+                </pre>
+        </pre>
+    </div>
+
+</body>
+
+</html>
+
+{{ end }}

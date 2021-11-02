@@ -1,0 +1,84 @@
+body {
+    background-color: rgba(128, 98, 78, 0.842);
+    font-family: Gill Sans, sans-serif;
+    text-align: center;
+}
+
+.output, .textzone {
+    margin: 1%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    background-color: rgba(187, 187, 187, 0.6);
+    width: 75%;
+    height: 25%;
+    border-style: inset;
+    border-radius: 5px;  
+}
+.output{
+    overflow-x: auto;
+    scrollbar-color: dark;
+}
+.select{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.export-name{
+    background-color: rgb(187, 187, 187);
+    border-radius: 5px;
+    margin-left: 3%;
+}
+
+.select_export{
+    margin-left: 3%;
+}
+
+/* titre responsive */
+@media screen and (max-width: 64em) {
+    h2 {
+        font-size: 1.25em;
+      }
+    }
+    
+    @media screen and (max-width: 55em) {
+    h2 {
+        font-size: 1.12em;
+      }
+    }
+    
+    @media screen and (max-width: 50em){
+    h2 {
+        font-size: 0.85em;
+      }
+    }
+    @media screen and (max-width: 40em){
+        h2 {
+            font-size: 0.5em;
+          }
+        }
+
+#font, #export, .submit-button{
+    background-color: rgb(187, 187, 187);
+    border-radius: 5px;
+}
+#littleHelp{
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+@keyframes epileptic {
+    from {background-color: rgba(51, 26, 9, 0.842);}
+    to {background-color: brown);}
+  }
+.bouttonRetour{
+    margin:auto;
+    width: 15%;
+    animation-name: epileptic;
+    animation-duration: 3s;
+    padding: 7px;
+    border-radius: 5px;
+}
